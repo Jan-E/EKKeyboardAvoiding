@@ -90,11 +90,8 @@ static NSString *const kKeyboardFrameKey = @"keyboardFrame";
 
 - (void)applyAvoidingContentInset:(UIEdgeInsets)avoidingInset
 {
-    NSTimeInterval animationDuration = [self.keyboardListener.keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    [UIView animateWithDuration:animationDuration animations:^{
-        [[self scrollView] setContentInset:avoidingInset];
-        [[self scrollView] setScrollIndicatorInsets:avoidingInset];
-    }];
+    [[self scrollView] setContentInset:avoidingInset];
+    [[self scrollView] setScrollIndicatorInsets:avoidingInset];
 }
 
 - (UIEdgeInsets)calculateExtraContentInset

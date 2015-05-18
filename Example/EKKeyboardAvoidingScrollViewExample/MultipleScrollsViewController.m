@@ -39,16 +39,6 @@ static NSString *const kCellIdentifier = @"CellIdentifier";
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    UIEdgeInsets autoInset = [self.scrollView contentInset];
-    autoInset.bottom = 0;
-    self.scrollView.contentInset = autoInset;
-    self.scrollView.scrollIndicatorInsets = autoInset;
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,7 +49,7 @@ static NSString *const kCellIdentifier = @"CellIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:kCellIdentifier];
-    [cell.textLabel setText:[NSString stringWithFormat:@"Cell #%d",indexPath.row]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"Cell #%ld",(long)indexPath.row]];
     
     return cell;
 }

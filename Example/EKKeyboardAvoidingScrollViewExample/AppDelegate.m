@@ -26,7 +26,7 @@
     [self setTabBarController:[UITabBarController new]];
     [self.tabBarController setViewControllers:@[
         [[UINavigationController alloc] initWithRootViewController:controller],
-        [[UINavigationController alloc] initWithRootViewController:[MultipleScrollsViewController new]]
+        [MultipleScrollsViewController new]
      ]];
     
     [self setTabBarItemWithText:@"Single Scroll" forControllerAtIndex:0];

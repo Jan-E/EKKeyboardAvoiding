@@ -44,7 +44,7 @@
 
 - (void)startNotificationsObseving
 {
-    [self observeNotificationNamed:UIKeyboardWillChangeFrameNotification
+    [self observeNotificationNamed:UIKeyboardDidChangeFrameNotification
                             action:@selector(keyboardDidChangeFrame:)];
 }
 

@@ -1,4 +1,4 @@
-## EKKeyboardAvoiding 2.0
+## EKKeyboardAvoiding
 It's an universal solution for keyboard avoiding that automatically changes content inset of your `UIScrollView` classes. When keyboard appears you will be able to see all content of your scroll views.
 
 ## How to install
@@ -7,7 +7,7 @@ Install using `CocoaPods`.
 
 ## Usage
 First import `UIScrollView+EKKeyboardAvoiding` category to your project
-<pre><code>#import "UIScrollView+EKKeyboardAvoiding.h"</code></pre>
+<pre><code>@import UIScrollView+EKKeyboardAvoiding</code></pre>
 
 To enable keyboard avoiding you have to set `contentSize` of your scroll view and enable keyboard avoiding using category method `setKeyboardAvoidingEnabled:`
 <pre><code>UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:[[self view] bounds]];
@@ -23,7 +23,3 @@ To disable keyboard avoiding provide `NO` to `setKeyboardAvoidingEnabled:` metho
 
 ##Notes
 Works on iPhone/iPad iOS 5.0+
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kirpichenko/ekkeyboardavoiding/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
